@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify</title>
+    <link rel="stylesheet" href="spotify.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav id="navigation">
+      <ul>
+        <li>
+          <img src="spotify.png" id="mainlogo" />
+        </li>
+        <li>
+          <ul>
+            <li>
+              <img src="home.png" class="icon" />
+            </li>
+            <li><a href="#">Home</a></li>
+          </ul>
+        </li>
+        <li>
+          <ul>
+            <li><img src="search.png" class="icon" /></li>
+            <li><a href="#">Search</a></li>
+          </ul>
+        </li>
+        <li><a href="#" id="lib">Your Library</a></li>
+        <li>
+          <button id="btn_Profile" onclick="profile()">Profile</button>
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <div id="left" class="content">
+        <img src="manwithheadset.jpg" id="headset" />
+      </div>
+      <div id="right" class="content">
+        <ul id="heading">
+          <li>#</li>
+          <li>TITLE</li>
+          <li>ARTIST</li>
+          <li>DURATION</li>
+        </ul>
+        <hr />
+      </div>
+      <footer id="bottom">
+        <ul>
+          <li>
+            <img src="next-previous.png" class="playericon" id="previous" />
+          </li>
+          <li>
+            <img src="play.png" class="playericon" id="playback" />
+          </li>
+          <li>
+            <img src="next-previous.png" class="playericon" id="next" />
+          </li>
+        </ul>
+        <div id="progress">
+          <input type="range" id="progressBar" value="0" />
+        </div>
+      </footer>
+    </div>
+    <script src="spotify.js"></script>
+  </body>
+</html>

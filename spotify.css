@@ -1,0 +1,253 @@
+/* DOM */
+:root {
+  --mygray: rgb(167, 166, 166);
+  --blackshade: rgb(11 8 8);
+  --spotifygreen: #1db954;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-size: 1.4vw;
+  font-family: "Ubuntu", sans-serif;
+}
+
+@media screen and (max-width: 900px) {
+  * {
+    font-size: 2vw;
+  }
+  #navigation img {
+    width: 40px;
+    height: 40px;
+  }
+  #bottom img {
+    width: 8vw;
+    height: 8vh;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  * {
+    font-size: 3vw;
+  }
+  #left {
+    display: none;
+  }
+  #navigation img {
+    width: 20px;
+    height: 20px;
+  }
+  #right {
+    margin: auto;
+    margin-top: 5vh;
+    width: 75vw;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  * {
+    font-size: 3vw;
+  }
+  #left {
+    display: none;
+  }
+  #navigation img {
+    width: 20px;
+    height: 20px;
+  }
+  #right {
+    margin: auto;
+    margin-top: 5vh;
+    width: 75vw;
+  }
+}
+
+.container {
+  display: grid;
+  grid-template-areas:
+    "left right right right"
+    "bottom bottom bottom bottom";
+  grid-row-gap: 2rem;
+  background-color: var(--blackshade);
+}
+
+#left {
+  grid-area: left;
+}
+#right {
+  grid-area: right;
+  margin-right: 5vw;
+  visibility: hidden;
+}
+#bottom {
+  grid-area: bottom;
+}
+
+/* navigation bar */
+.icon {
+  width: 3vw;
+  height: 6vh;
+  filter: invert(100%);
+  margin-right: 2vw;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+#mainlogo {
+  width: 3vw;
+  height: 6vh;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+#navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+#navigation li {
+  list-style: none;
+}
+
+#navigation {
+  background-color: black;
+  padding: 2.4vh 0vw;
+}
+
+#navigation a {
+  text-decoration: none;
+  color: var(--mygray);
+}
+
+#navigation a:hover {
+  color: white;
+}
+
+#btn_Profile {
+  border: none;
+  cursor: pointer;
+  color: var(--mygray);
+  background-color: black;
+}
+
+#btn_Profile:hover {
+  color: white;
+}
+
+/* main window */
+.content {
+  color: white;
+  margin-top: 4vh;
+  padding: 1.72rem;
+}
+
+#right hr {
+  border-color: var(--spotifygreen);
+  margin-top: 1rem;
+}
+
+#right {
+  height: 50vh;
+  overflow-y: scroll;
+  border: 1px solid var(--spotifygreen);
+}
+
+#right::-webkit-scrollbar {
+  width: 10px;
+}
+#right::-webkit-scrollbar-track {
+  background-color: white;
+}
+#right::-webkit-scrollbar-thumb {
+  background-color: var(--spotifygreen);
+  border-radius: 1rem;
+  border: 1px solid white;
+}
+
+.songart {
+  width: 3vw;
+  height: 6vh;
+  border-radius: 2rem;
+}
+
+#headset {
+  width: 18vw;
+  opacity: 0.7;
+}
+
+#heading li {
+  margin-left: 3vw;
+}
+
+#right ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#right ul.songs {
+  border: 1px solid white;
+  border-radius: 1rem;
+  padding: 0.3rem;
+  margin: 2rem 0rem;
+  cursor: pointer;
+}
+
+#right ul.songs:hover {
+  background-color: black;
+}
+
+#right li {
+  list-style: none;
+  /* margin: 0vh 2vw; */
+}
+
+/* Player */
+#bottom {
+  background-color: black;
+  padding: 2vh 0vw;
+}
+
+#bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#bottom li {
+  list-style: none;
+}
+
+.playericon {
+  width: 4vw;
+  height: 8vh;
+  filter: invert(100%);
+  margin: 1vh 3vw;
+  cursor: pointer;
+  border-radius: 2rem;
+  opacity: 0.7;
+}
+
+.playericon:hover {
+  opacity: 1;
+}
+
+#previous {
+  transform: rotate(180deg);
+}
+
+#progress {
+  display: flex;
+  justify-content: center;
+}
+
+#progressBar {
+  width: 50vw;
+  height: 3px;
+  margin-top: 3vh;
+  cursor: pointer;
+}
